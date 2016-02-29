@@ -1,9 +1,9 @@
 
 # Detailed Guide to Contributions.
 ===================================
- Guide first posted at [Sean Campbell's Blog](https://natacseanc.wordpress.com/2015/09/07/beginners-guide-to-easy-contributions-to-free-code-camp/) 
+ Guide first posted at [Sean Campbell's Blog](https://natacseanc.wordpress.com/2015/09/07/beginners-guide-to-easy-contributions-to-free-code-camp/)
 
-The first 2 steps are *setting up* the environment. 
+The first 2 steps are *setting up* the environment.
 
 ### Step 1: Fork, Clone, Upstream Setup
 
@@ -15,7 +15,7 @@ cd freecodecamp
 git remote add upstream https://github.com/FreeCodeCamp/FreeCodeCamp
 ```
 
-The first line clones the repo to your local machine; making a directory called `freecodecamp` in the current folder you are in. Then move inside that folder with `cd freecodecamp`. The last line adds the original Free Code Camp repo as a remote upstream. This allows you to pull in the changes that are made to the main project to keep you local copy up to date. This is done by running...
+The first line clones the repo to your local machine, making a directory called `freecodecamp` in the current folder you are in. Then move inside that folder with `cd freecodecamp`. The last line adds the original Free Code Camp repo as a remote upstream. This allows you to pull in the changes that are made to the main project to keep your local copy up to date. This is done by running...
 
 ```bash
 git fetch upstream
@@ -32,7 +32,7 @@ Your local `staging` branch is up to date with the [Free Code Camp repo](https:/
 
 ### Step 2: Follow README.md Instructions for more Setup.
 
-This guide stresses importance of reading the [README.md](https://github.com/FreeCodeCamp/FreeCodeCamp#contributing) on contributing. Please have [ESlinter](http://eslint.org/docs/user-guide/integrations.html) running, as the warning are there to help you. 
+This guide stresses the importance of reading the [README.md](https://github.com/FreeCodeCamp/FreeCodeCamp#contributing) on contributing. Please have [ESlinter](http://eslint.org/docs/user-guide/integrations.html) running, as the warnings are there to help you.
 
 ### Prerequisites
 
@@ -61,7 +61,7 @@ npm install -g gulp
 touch .env
 ```
 
-What goes in the .env file?? Well first if you do not have a [Mandrill account](https://mandrill.com/signup/?_ga=1.36983655.693747097.1440924471) you will need to set one up. 
+What goes in the .env file?? Well first if you do not have a [Mandrill account](https://mandrill.com/signup/?_ga=1.36983655.693747097.1440924471) you will need to set one up.
 Mandrill is an email service that is beyond the scope of this guide. A quick note; this file will not be included when pushing to GitHub as it will be listed in the `.gitignore` file.
 
 #### .env file contents
@@ -135,7 +135,7 @@ The issue on GitHub will look something like this.
 <a href="https://natacseanc.files.wordpress.com/2015/09/issue1.png"><img class="alignnone wp-image-161" src="https://natacseanc.files.wordpress.com/2015/09/issue1.png?w=300" alt="issue" width="456" height="205" /></a>
 
 
-To find out what file the challenge will be in go to the FCC Map to find out which section the challenge is a part of; the example is [Learn how Script Tags and Document Ready Work](http://freecodecamp.com/challenges/waypoint-learn-how-script-tags-and-document-ready-work) and it is a part of the jQuery section.
+To find out what file the challenge will be in go to the FCC Map to find out which section the challenge is a part of; the example is [Learn how Script Tags and Document Ready Work](http://freecodecamp.com/challenges/learn-how-script-tags-and-document-ready-work) and it is a part of the jQuery section.
 
 <a href="https://natacseanc.files.wordpress.com/2015/09/section.png"><img class="alignnone size-medium wp-image-164" src="https://natacseanc.files.wordpress.com/2015/09/section.png?w=300" alt="section" width="300" height="262" /></a>
 
@@ -158,14 +158,14 @@ Go to your terminal and run the command below to make sure that nothing has chan
 git fetch upstream
 ```
 
-If there was a change then merge in like Step 1. Create a branch that explains the change ie `fix/typo-jquery-challenge-test`. Include a brief description of the changes you have made. Include `closes #1337` for each issue that this pull request intends to close.
+If there was a change then merge in like Step 1. Create a branch that explains the change ie `fix/typo-jquery-test`. Include a brief description of the changes you have made. Include `closes #1337` for each issue that this pull request intends to close.
 
 ```bash
 # create and move to branch
 git checkout -b fix/typo-jquery-challange-test
 ```
 
-Open the `jQuery.json` file; the issue that you is that there is parenthesis in the test output that should not be there. Each test has two parts to the `assert()` method. The first is the test(s), the second part which is separated by a comma is the output description. Please note this picture shows after the change has been made.
+Open the `jQuery.json` file; the issue that you have is that there is parenthesis in the test output that should not be there. Each test has two parts to the `assert()` method. The first is the test(s), the second part which is separated by a comma is the output description. Please note this picture shows after the change has been made.
 
 <a href="https://natacseanc.files.wordpress.com/2015/09/test.png"><img class="alignnone size-full wp-image-131" src="https://natacseanc.files.wordpress.com/2015/09/test.png" alt="test" width="809" height="18" /></a>
 
@@ -187,13 +187,13 @@ node seed/
 gulp
 ```
 
-The gulp command will take a second or too then there will be a IP address that I right click and open in my browser. Now I will navigate to that challenge to verify the changes were what I expected. This is the purple local URL:
+The gulp command will take a second or two then there will be a IP address that I right click and open in my browser. Now I will navigate to that challenge to verify the changes were what I expected. This is the purple local URL:
 
 <a href="https://natacseanc.files.wordpress.com/2015/09/ipadress.png"><img class="alignnone size-full wp-image-137" src="https://natacseanc.files.wordpress.com/2015/09/ipadress.png" alt="ipadress" width="674" height="100" /></a>
 
 ### Step 7: Creating Pull Request
 
-After making changes and verification of you work run:
+After making changes and verification of your work run:
 
 ```bash
 # check status for piece of mind to see unstaged changes
@@ -228,7 +228,7 @@ git push -u origin fix/typo-jquery-test
 # where the part after origin is what ever you called the local branch
 ```
 
-Now the changes are on both you local machine and you GitHub account. Opening up a browser you can navigate to the forked copy on your GitHub account. There will be a green button just above the listing of files on the right that read Compare & Pull Request.
+Now the changes are on both your local machine and your GitHub account. Opening up a browser, you can navigate to the forked copy on your GitHub account. There will be a green button just above the listing of files on the right that read Compare & Pull Request.
 
 <img class="alignnone size-full wp-image-139" src="https://natacseanc.files.wordpress.com/2015/09/compare.png" alt="compare" width="500" height="203" />
 
@@ -236,7 +236,7 @@ Clicking this takes you to the screen where you can review the changes once agai
 
 <img class="alignnone size-full wp-image-132" src="https://natacseanc.files.wordpress.com/2015/09/pr.png" alt="pr" width="600" height="489" />
 
-Guide written by: [@natac13](https://github.com/natac13) on Twitter [@natac1311](https://twitter.com/?lang=en) 
+Guide written by: [@natac13](https://github.com/natac13) on Twitter [@natac1311](https://twitter.com/?lang=en)
 
 ### Appendix A: Stash
 
@@ -253,7 +253,7 @@ git stash
 # merge upstream into the working branch
 git merge upstream/staging
 
-# reapply you changes
+# reapply your changes
 git stash apply
 ```
 
